@@ -7,7 +7,7 @@ app.config["DEBUG"] = True
 
 @app.route('/git_update', methods=['POST'])
 def git_update():
-    repo = git.Repo('./pythonanywhere')
+    repo = git.Repo('./flask_pythoneverywhere')
     origin = repo.remotes.origin
     repo.create_head('main',
                      origin.refs.main).set_tracking_branch(origin.refs.main).checkout()
